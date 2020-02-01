@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body { padding-top: 80px;}
+body {
+    background-image: url('https://www.itl.cat/pngfile/big/208-2085794_10-top-jordan-logo-wallpaper-for-iphone-full.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 150%;
+  }

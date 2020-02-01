@@ -1,6 +1,5 @@
+
 import { Component } from '@angular/core';
-import { AngularFireDatabase} from '@angular/fire/database';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,16 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'giljeShop';
-  description = 'Angular';
+ 
 
-  itemValue = '';
-  items: Observable<any[]>;
-
-  constructor(public db: AngularFireDatabase){
-
-    this.items = db.list('items').valueChanges();
-    
-
-  }
+  
 }

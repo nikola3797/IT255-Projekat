@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="kicks.imageURL  "
+        alt="{{ kicks.brand }}"
+        class="img-responsive" style="max-height: 350px">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ kicks.brand }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group"
+        appDropDown
+        #r="appDropDown">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle">
+          Azuriraj patike <span class="carret"> </span>
+        </button>
+        <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
+          <li><a style="cursor: pointer" (click)="onEditKicks()">Izmeni Patike</a></li>
+          <li><a style="cursor: pointer" (click)="onDeleteKicks()">Obrisi Patike</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      {{ kicks.model}}
+     
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      {{ kicks.cena}}
+     
+    </div>
+  </div>

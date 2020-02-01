@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="kicksForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            type="submit"
+            class="btn btn-success"
+          [disabled]="!kicksForm.valid">Sacuvaj</button>
+          <button type="submit" class="btn btn-danger" (click)="onCancel()">Otkazi</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="brand">Naziv Patike</label>
+            <input
+            type="text"
+            id="brand"
+            formControlName="brand"
+            style="width: 250%"
+            class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="cena">Cena Patike</label>
+            <input
+            type="text"
+            id="cena"
+            formControlName="cena"
+            style="width: 250%"
+            class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imageURL">Link za Sliku</label>
+            <input
+              type="text"
+              id="imageURL"
+              style="width: 250%"
+              formControlName="imageURL"
+              class="form-control"
+            #imageURL>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <img [src]="imageURL.value" class="img-responsive" style="width: 450px">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="model">Model patike</label>
+            <textarea
+              type="text"
+              id="model"
+              formControlName="model"
+              style="width: 250%"
+              class="form-control"
+              rows="6"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    
+    </form>
+  </div>
+</div>
